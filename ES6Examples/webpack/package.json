@@ -1,0 +1,14 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "First example of ES6 features with webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Franco Arratia",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
