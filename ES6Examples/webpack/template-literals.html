@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let name = "Franco";
+        let message = `Hello   
+            ${name}`; // This preserves the spaces, etc.
+
+        console.log(message);
+
+        // ------------------------------------------------
+
+        let number1 = 10;
+        let number2 = 20;
+        let results = `The grocery total was: ${number1 + number2}`; // Sum will be applied
+        console.log(results);
+
+        let results2 = `The grocery total was: ${number1} + ${number2}`; // Sum is not applied
+        console.log(results2);
+
+        let results3 = `The grocery total was: $${number1 + number2}`;
+        console.log(results3);
+
+        // ------------------------------------------------
+
+        let title = function() {
+            return "Franco Arratia";
+        };
+
+        let link = `<a href="">${title()}</a>`;
+        console.log(link);
+    </script>
+</body>
+</html>
