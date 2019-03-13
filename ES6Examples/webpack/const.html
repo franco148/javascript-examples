@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const car = "Honda"; // This variable value will not change
+        // car = "BMW"; // This will show us an exception in the console.
+        console.log(car);
+
+        const cars = ['Honda', 'BMW'];
+        console.log('Initial Cars: ', cars);
+        cars.push('Ferrari'); // This will work.
+        console.log('When pushed a new car: ', cars);
+
+        const carObj = {
+            brand: 'BMW',
+            doors: 2,
+            engine: 3.0
+        };
+
+        carObj.brand = "Ferrari";
+        console.log(carObj); // This also work
+    </script>
+</body>
+</html>
