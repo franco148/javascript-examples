@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var person = {
+            name: 'Franco',
+            runs: function() { console.log('Franco is running'); }
+        };
+
+        person.runs();
+
+        // ------------------------------------------------
+
+        var person1 = {};
+        person1.name = "Franco";
+        person1.runs = function() { console.log('Franco1 is running'); };
+
+        person1.runs();
+
+        // ------------------------------------------------
+
+        var name = "Franco";
+        var runs = () => console.log('Franco2 is running');
+        var person2 = {name, runs};
+
+        person2.runs();
+
+        // ------------------------------------------------
+        var person3 = {
+            name: 'Franco',
+            runs() {
+                console.log('Franco3 is running');
+            }
+        };
+
+        person3.runs();
+    </script>
+</body>
+</html>
