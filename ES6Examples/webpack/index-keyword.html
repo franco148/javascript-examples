@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var person = {
+            name: "Franco",
+            moves: ['running', 'fighting', 'flying'],
+            displayMoves: function() {
+
+                var THIS = this;
+
+                this.moves.forEach(function (move) {
+                    // sometimes this.name would not work, for fixing that, we will create a local variable THIS.
+                    // var str = this.name + " is " + move + " towards the enemy.";
+                    var str = THIS.name + " is " + move + " towards the enemy.";
+                    console.log(str);
+                })
+            }
+        };
+
+        person.displayMoves();
+
+        // ----------- second approach ----------------------
+
+        var personObj = {
+            name: "Franco 2",
+            moves: ['running', 'fighting', 'flying'],
+            displayMoves: function() {
+                this.moves.forEach(function (move) {
+                    // sometimes this.name would not work, for fixing that, we will use bind funtion.
+                    var str = this.name + " is " + move + " towards the enemy.";
+                    console.log(str);
+                }.bind(this));
+            }
+        };
+
+        personObj.displayMoves();
+
+        // ----------- third approach ----------------------
+
+        var personEs6 = {
+            name: "Franco ES6",
+            moves: ['running', 'fighting', 'flying'],
+            displayMoves() {
+                this.moves.forEach(move => {
+                    // sometimes this.name would not work, for fixing that, we will use bind funtion.
+                    var str = this.name + " is " + move + " towards the enemy.";
+                    console.log(str);
+                });
+            }
+        };
+
+        personEs6.displayMoves();
+    </script>
+</body>
+</html>
