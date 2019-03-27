@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // -------------- Without destructuring feature -------------------
+        var cars = ['BMW', 'Mercedes', 'Ford'];
+        console.log(cars[0]);
+
+        // -------------- With destructuring feature -------------------
+        var [bmw] = ['BMW', 'Mercedes', 'Ford'];
+        console.log('Example 1:', bmw);
+
+        var [bmw1, mercedes1] = ['BMW', 'Mercedes', 'Ford'];
+        console.log(`Example 2: ${bmw1} and ${mercedes1}`);
+
+        var [bmw2,, ford2] = ['BMW', 'Mercedes', 'Ford', 'Honda', 'Ferrari'];
+        console.log(`Example 3: ${bmw1} and ${ford2}`);
+
+
+        var person = {
+            name: "Franco fral",
+            bio: "Software developer"
+        };
+
+        console.log(person.name);
+
+        var {name} = {
+            name: "Franco fral",
+            bio: "Software developer"
+        };
+        console.log(`Example 4: ${name}`);
+
+        var {name1, bio1} = {
+            name1: "Franco fral",
+            bio1: "Software developer"
+        };
+        console.log(`Example 5: ${name1} and Bio: ${bio1}`);
+
+        let person1 = {
+            name: "Franco fral",
+            bio: "Software developer"
+        };
+
+        let displayData = ({name, bio}) => {
+            return `${name} - ${bio}`;
+        };
+        console.log('Example 6: ', displayData(person1));
+    </script>
+</body>
+</html>
