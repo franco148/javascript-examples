@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        class Person {
+            constructor(name, title) {
+                this.name = name;
+                this.title = title;
+            }
+
+            displayData() {
+                console.log(`${this.name} is a great ${this.title}`);
+            }
+        }
+
+        class Student extends Person {
+            constructor() {
+                super('Fernando', 'student');
+            }
+        }
+
+        let student = new Student();
+        student.displayData();
+
+    </script>
+</body>
+</html>

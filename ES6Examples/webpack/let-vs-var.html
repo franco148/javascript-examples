@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var x = 5;
+
+        if (x) {
+            var x = 20;
+        }
+
+        // It is going to show us 20 as a result. It is going to be re-assigned.
+        console.log(x);
+
+        var y = 5;
+
+        if (y) {
+            let y = 20;
+        }
+
+        // It is going to show us 5 as a result. Y exists only in its scope.
+        console.log(y);
+
+        // When first and second variables are let, nothing happens, It will still show us the values
+        // based on their scope.
+        // However, when the first variable is declared as LET then in the if clause you declare the
+        // variable name with VAR keyword, then you are going to get an exception that says: duplicate
+        // declaration.
+    </script>
+</body>
+</html>

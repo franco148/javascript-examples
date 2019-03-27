@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var adults = ['John', 'Peter', 'Maria'];
+
+        var kids = ['Johnny', 'Pablito', 'Marianita'];
+        // console.log(kids); // Result: (3) ["Johnny", "Pablito", "Marianita"]
+        // console.log(...kids); // Result: Johnny Pablito Marianita
+
+        var people = ['Juan', 'Williams', ...kids, ...adults];
+        // console.log(people); // Result: (8) ["Juan", "Williams", "Johnny", "Pablito", "Marianita", "John", "Peter", "Maria"]
+
+        var people2 = ['Juan', 'Williams', kids, adults]; 
+        // console.log(people2); // Result: (4) ["Juan", "Williams", Array(3), Array(3)]
+
+
+        // --------------------------------------------------------
+        var sendData = function(username, email, password) {
+            console.log('DATA SENT ', username, email, password);
+        };
+
+        // sendData('Rico', 'rico@email.com', 'ricopwd'); // Result: DATA SENT  Rico rico@email.com ricopwd
+
+        var someData = ['Rico', 'rico@email.com', 'ricopwd']; 
+        // sendData(someData); // Result: DATA SENT  (3) ["Rico", "rico@email.com", "ricopwd"] undefined undefined
+        // sendData(...someData); //Result: DATA SENT  Rico rico@email.com ricopwd
+        // sendData.apply(null, someData); // Result: DATA SENT  Rico rico@email.com ricopwd
+
+        var cars = [
+            { brand: "Honda", doors: 2 },
+            { brand: "Porsche", doors: 4 }
+        ];
+
+        var newCars = [
+            { brand: "Toyota", doors: 2 },
+            { brand: "Mercedes", doors: 4 }
+        ];
+
+        // cars.push(newCars);
+        // console.log(cars); // Result: (3) [{…}, {…}, Array(2)]
+
+        // cars.push(...newCars);
+        // console.log(cars); // Result: (4) [{…}, {…}, {…}, {…}]
+
+        var moreCars = [
+            { brand: "Toyota", doors: 2 },
+            { brand: "Mercedes", doors: 4 },
+            ...cars
+        ];
+        console.log('More cars', moreCars); // Result: More cars (4) [{…}, {…}, {…}, {…}]
+        
+    </script>
+</body>
+</html>
